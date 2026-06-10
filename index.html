@@ -18,7 +18,7 @@
       --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.7rem);
       --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
       --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
-      --color-bg: #fbf6ef; --color-surface: #fffaf4; --color-surface-2: #fffdf9; --color-surface-offset: #f5ede3;
+      --color-bg: #fbf6ef; --color-surface: #fffaf4; --color-surface-2: #fffdf9; --color-surface-offset: #f6ede2;
       --color-border: #dfd1c1; --color-text: #2f241d; --color-text-muted: #6e5c4f; --color-text-faint: #a08d7f;
       --color-primary: #8a1f2d; --color-primary-hover: #6d1824; --color-secondary: #a46e1b; --color-highlight: #f4e3c3; --color-text-inverse: #fff9f2;
       --radius-sm: 0.375rem; --radius-md: 0.9rem; --radius-lg: 1.4rem; --radius-full: 9999px;
@@ -34,7 +34,7 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:var(--color-bg);color:var(--color-text)}
-    img,svg{display:block;max-width:100%} a{text-decoration:none;color:inherit} button,input,textarea{font:inherit} button{border:none;background:none;cursor:pointer}
+    img,svg{display:block;max-width:100%} a{text-decoration:none;color:inherit} button{font:inherit;border:none;background:none;cursor:pointer}
     .skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;background:var(--color-primary);color:var(--color-text-inverse);padding:0.75rem 1rem;border-radius:var(--radius-sm);z-index:1000}
     .container{width:min(calc(100% - 2rem), var(--content));margin-inline:auto}
     .site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb, var(--color-text) 10%, transparent)}
@@ -55,8 +55,8 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:48px;padding:0.95rem 1.2rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;transition:0.2s ease}
     .btn-primary{background:var(--color-primary);color:var(--color-text-inverse)} .btn-primary:hover{background:var(--color-primary-hover)}
     .btn-secondary{border:1px solid color-mix(in srgb, var(--color-text) 12%, transparent);background:var(--color-surface)}
-    .hero-card,.card{background:var(--color-surface);border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
-    .hero-card{padding:var(--space-6);display:grid;gap:var(--space-4)}
+    .hero-card,.card,.contact-panel{background:var(--color-surface);border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
+    .hero-card,.card,.contact-panel{padding:var(--space-6)}
     .meta{display:grid;gap:var(--space-4)} .meta-item{padding-bottom:var(--space-4);border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)} .meta-item:last-child{border-bottom:none;padding-bottom:0}
     .meta-label{font-size:var(--text-xs);letter-spacing:0.16em;text-transform:uppercase;color:var(--color-text-faint);margin-bottom:0.35rem}
     .meta-value{font-size:var(--text-lg);font-weight:700}
@@ -64,22 +64,23 @@
     .section-head{display:flex;justify-content:space-between;gap:var(--space-4);align-items:end;margin-bottom:var(--space-6)}
     .section-head p{max-width:60ch;color:var(--color-text-muted)}
     .grid-3,.grid-2{display:grid;gap:var(--space-5)} .grid-3{grid-template-columns:repeat(3, minmax(0,1fr))} .grid-2{grid-template-columns:repeat(2, minmax(0,1fr))}
-    .card{padding:var(--space-6)} .card h3{font-size:var(--text-xl);margin-bottom:var(--space-3)} .card p,.card li,label,.field-help{color:var(--color-text-muted)}
+    .card h3,.contact-panel h3{font-size:var(--text-xl);margin-bottom:var(--space-3)} .card p,.card li,.contact-panel p{color:var(--color-text-muted)}
     .list{list-style:none;display:grid;gap:0.8rem;margin-top:var(--space-4)}
     .list li{padding-left:1rem;position:relative}.list li::before{content:"";position:absolute;left:0;top:0.7em;width:0.38rem;height:0.38rem;border-radius:50%;background:var(--color-secondary)}
     .badge{display:inline-flex;padding:0.45rem 0.8rem;border-radius:var(--radius-full);background:var(--color-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:800;letter-spacing:0.08em;text-transform:uppercase}
-    .note{margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-md);background:var(--color-surface-offset);color:var(--color-text-muted)}
     .deadline{margin-top:var(--space-5);padding:var(--space-4) var(--space-5);background:color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));border:1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);border-radius:var(--radius-md)}
     .deadline strong{color:var(--color-primary)}
-    .form-grid{display:grid;gap:var(--space-4)}
-    .field{display:grid;gap:0.5rem}
-    label{font-size:var(--text-sm);font-weight:700;color:var(--color-text)}
-    input,textarea{width:100%;padding:0.95rem 1rem;border-radius:var(--radius-md);border:1px solid color-mix(in srgb, var(--color-text) 12%, transparent);background:var(--color-surface-2);color:var(--color-text)}
-    textarea{min-height:130px;resize:vertical}
-    input:focus-visible,textarea:focus-visible{outline:2px solid var(--color-secondary);outline-offset:2px}
-    .contact-panel{padding:clamp(2rem, 4vw, 3rem);background:linear-gradient(135deg, var(--color-surface), var(--color-surface-2));border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);border-radius:calc(var(--radius-lg) + 0.2rem);box-shadow:var(--shadow-md)}
+    .gift-note{margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)}
+    .gift-note strong{color:var(--color-primary)}
+    .map-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5);margin-top:var(--space-5)}
+    .map-card{display:flex;gap:var(--space-4);align-items:flex-start}
+    .map-icon{width:2.75rem;height:2.75rem;border-radius:0.85rem;background:var(--color-surface-offset);display:grid;place-items:center;flex:0 0 auto}
+    .map-icon svg{width:1.4rem;height:1.4rem}
+    .contact-panel{box-shadow:var(--shadow-md)}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-5)}
+    .small-note{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4)}
     .footer{padding:var(--space-8) 0;color:var(--color-text-muted);font-size:var(--text-sm)}
-    @media (max-width: 900px){.hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}.section-head,.header-inner{align-items:flex-start}.nav{display:none}h1{max-width:14ch}}
+    @media (max-width: 900px){.hero-grid,.grid-3,.grid-2,.map-links{grid-template-columns:1fr}.section-head,.header-inner{align-items:flex-start}.nav{display:none}h1{max-width:14ch}}
   </style>
 </head>
 <body>
@@ -98,8 +99,8 @@
         <a href="#venue">Venue</a>
         <a href="#stay">Stay</a>
         <a href="#travel">Travel</a>
-        <a href="#tradition">Celebration</a>
-        <a href="#guestinfo">Guest Info</a>
+        <a href="#celebration">Celebration</a>
+        <a href="#contact">Questions</a>
       </nav>
       <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -113,12 +114,12 @@
         <div>
           <div class="eyebrow">Gujarati Hindu Wedding</div>
           <h1>Malav Dalal &amp; Surbhi Modi</h1>
-          <p class="lede">We are so grateful to celebrate our marriage with our family and friends on <strong>September 20, 2026</strong> at Lincolnshire Marriott Resort. This page is designed to help guests plan their stay, share travel details, and respond with the information we need for a smooth Gujarati Hindu wedding weekend.</p>
+          <p class="lede">We are so grateful to celebrate our marriage with family and friends on <strong>September 20, 2026</strong> at Lincolnshire Marriott Resort. This page brings together the hotel and travel details for the weekend, while your separate RSVP link in email will guide the event-specific questions and attendance details.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink" target="_blank" rel="noopener noreferrer">Book the room block</a>
-            <a class="btn btn-secondary" href="#guestinfo">Share guest details</a>
+            <a class="btn btn-secondary" href="#travel">View directions</a>
           </div>
-          <div class="deadline"><strong>Please book your room and respond to RSVP by July 15, 2026.</strong> Ceremony timing and guest-specific event details are shared individually by email.</div>
+          <div class="deadline"><strong>Please reserve your room and submit your RSVP by July 15, 2026.</strong> Ceremony timing and guest-specific event details will continue to be shared individually by email.</div>
         </div>
         <aside class="hero-card" aria-label="Wedding summary">
           <span class="badge">Save the date</span>
@@ -137,38 +138,35 @@
             </div>
             <div class="meta-item">
               <div class="meta-label">RSVP</div>
-              <div class="meta-value">Check your email or contact Malav, Surbhi, or family.</div>
+              <div class="meta-value">Please use the RSVP link sent to you by email, or contact Malav, Surbhi, or family with questions.</div>
             </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="tradition">
+    <section id="celebration">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="badge">Celebration</span>
-            <h2>A Gujarati Hindu wedding weekend</h2>
+            <h2>A joyful Gujarati Hindu wedding weekend</h2>
           </div>
-          <p>Gujarati Hindu weddings often include multiple rituals and family-centered moments across the celebration, and guests may receive event timing separately depending on which ceremonies they are invited to attend.</p>
+          <p>Gujarati Hindu weddings often bring together multiple ceremonies, family traditions, and shared moments across the celebration, Event details and RSVP-Invitations you receive in email.</p>
         </div>
         <div class="grid-2">
           <article class="card">
-            <h3>What guests should know</h3>
+            <h3>Planning notes</h3>
             <ul class="list">
-              <li>This celebration reflects Gujarati Hindu wedding traditions, with family, blessings, and ritual moments central to the experience.</li>
-              <li>Your invitation email will clarify the ceremony timing and events relevant to you.</li>
-              <li>We recommend planning your stay early so you can enjoy the celebration without travel stress.</li>
+              <li>Your invitation email will confirm the event timing and schedule.</li>
+              <li>Booking early is the easiest way to enjoy the weekend comfortably and stay close to family activities.</li>
+              <li>If you have questions about attendance or logistics, please reach out to Malav, Surbhi, or family.</li>
             </ul>
           </article>
           <article class="card">
-            <h3>Helpful planning note</h3>
-            <ul class="list">
-              <li>Traditional weddings may involve morning and evening functions, so please check your email carefully for your specific schedule.</li>
-              <li>If you have questions about attendance, logistics, or family coordination, contact Malav, Surbhi, or family directly.</li>
-              <li>Room block and RSVP responses by July 15, 2026 will help us finalize planning for all guests.</li>
-            </ul>
+            <h3>Gift note</h3>
+            <p>Above all, your presence and blessings mean the most to us. For guests who are planning ahead, we kindly request no boxed gifts.</p>
+            <div class="gift-note"><strong>With love and gratitude:</strong> your presence is the greatest gift, and we kindly request no boxed gifts.</div>
           </article>
         </div>
       </div>
@@ -179,9 +177,9 @@
         <div class="section-head">
           <div>
             <span class="badge">Venue</span>
-            <h2>Resort setting</h2>
+            <h2>Lincolnshire Marriott Resort</h2>
           </div>
-          <p>Lincolnshire Marriott Resort sits on 175 acres in Chicago’s North Shore suburbs and includes event space, dining, golf, spa amenities, pools, and the Marriott Theatre on property.</p>
+          <p>The resort is set on 175 acres in Chicago’s North Shore suburbs and offers event space, restaurants, golf, spa amenities, pools, and Marriott Theatre on property.</p>
         </div>
         <div class="grid-2">
           <article class="card">
@@ -197,7 +195,7 @@
             <ul class="list">
               <li>Restaurants and bars, an on-site Starbucks, spa access, pools, and a fitness center.</li>
               <li>Crane’s Landing Golf Club is on property for guests staying through the weekend.</li>
-              <li>Marriott Theatre is another convenient on-site experience during your stay.</li>
+              <li>Marriott Theatre offers another easy on-site outing during your stay.</li>
             </ul>
           </article>
         </div>
@@ -209,17 +207,16 @@
         <div class="section-head">
           <div>
             <span class="badge">Stay</span>
-            <h2>Book your room</h2>
+            <h2>Hotel booking</h2>
           </div>
-          <p>The simplest option is to stay at the wedding venue itself. Please use the room block link and submit your needs by the RSVP deadline.</p>
+          <p>Staying at the venue is the simplest option for the wedding weekend. Please use the room block link and complete your booking by July 15, 2026.</p>
         </div>
         <div class="card">
-          <h3>Room block link</h3>
-          <p>Reserve your room directly through the wedding block at the resort, and please complete your reservation by July 15, 2026.</p>
+          <h3>Reserve through the room block</h3>
+          <p>Booking at the resort keeps everything easy for ceremonies, family gatherings, and late-evening celebrations.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink" target="_blank" rel="noopener noreferrer">Reserve with Marriott</a>
           </div>
-          <div class="note">Staying on property is the easiest way to manage early ceremonies, family gatherings, and late-night celebrations.</div>
         </div>
       </div>
     </section>
@@ -229,9 +226,9 @@
         <div class="section-head">
           <div>
             <span class="badge">Travel</span>
-            <h2>Getting there</h2>
+            <h2>Directions and arrival</h2>
           </div>
-          <p>For most out-of-town guests, O’Hare is the closest airport. The resort does not provide standard shuttle service, so plan on rideshare, taxi, rental car, or a pre-arranged pickup.</p>
+          <p>For most out-of-town guests, Chicago O’Hare is the closest airport. The resort does not provide a standard airport shuttle, so rideshare, taxi, rental car, or a pre-arranged pickup will be the easiest options.</p>
         </div>
         <div class="grid-3">
           <article class="card">
@@ -255,66 +252,50 @@
             <ul class="list">
               <li>The hotel does not provide regular airport shuttle service.</li>
               <li>Rideshare is usually the simplest option from ORD.</li>
-              <li>If you are staying through multiple events, a car may be useful for suburban travel.</li>
+              <li>If you are staying through multiple events, having a car may be helpful for suburban travel.</li>
             </ul>
           </article>
+        </div>
+        <div class="map-links">
+          <a class="card map-card" href="https://www.google.com/maps/search/10+Marriott+Drive,+Lincolnshire,+IL+60069" target="_blank" rel="noopener noreferrer">
+            <div class="map-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6-5.33-6-11a6 6 0 1 1 12 0c0 5.67-6 11-6 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            </div>
+            <div>
+              <h3>Open in Google Maps</h3>
+              <p>Use Google Maps for turn-by-turn directions to the resort.</p>
+            </div>
+          </a>
+          <a class="card map-card" href="https://maps.apple.com/place?place-id=I57194BA544EB9D28" target="_blank" rel="noopener noreferrer">
+            <div class="map-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6-5.33-6-11a6 6 0 1 1 12 0c0 5.67-6 11-6 11Z"></path><path d="M9.5 10.5h5"></path></svg>
+            </div>
+            <div>
+              <h3>Open in Apple Maps</h3>
+              <p>Open the venue in Apple Maps for iPhone-friendly directions.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="guestinfo">
+    <section id="contact">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="badge">Guest information</span>
-            <h2>Share your details with us</h2>
+            <span class="badge">Questions</span>
+            <h2>Need anything else?</h2>
           </div>
-          <p>A static website cannot send email by itself without a form service or backend, so this form is set up to open your email app using a mailto link. A dedicated form service is the more reliable option for collecting guest responses from GitHub Pages.</p>
+          <p>Please use the separate RSVP link in your email for attendance details and guest questions. For anything else, you are welcome to email the couple directly.</p>
         </div>
         <div class="contact-panel">
-          <form action="mailto:surbhimalav29+guestinfo@gmail.com" method="post" enctype="text/plain" class="form-grid">
-            <div class="field">
-              <label for="fullname">Your name</label>
-              <input id="fullname" name="Guest Name" type="text" placeholder="Enter your full name" required>
-            </div>
-            <div class="field">
-              <label for="email">Your email</label>
-              <input id="email" name="Guest Email" type="email" placeholder="name@example.com" required>
-            </div>
-            <div class="field">
-              <label for="note">Send a note to the couple?</label>
-              <textarea id="note" name="Note to the Couple" placeholder="Share your message for Malav and Surbhi"></textarea>
-            </div>
-            <div class="field">
-              <label for="arrival">When will you and your party arrive?</label>
-              <textarea id="arrival" name="Arrival Timing" placeholder="Arrival date, time, and whether you are attending one or multiple events"></textarea>
-            </div>
-            <div class="field">
-              <label for="party">How many adults and kids are in your party? List names.</label>
-              <textarea id="party" name="Party Details" placeholder="Adults, children, and names of everyone traveling with you"></textarea>
-            </div>
-            <div class="field">
-              <label for="travelinfo">Send us your travel information such as flight arrival and departures for our knowledge.</label>
-              <textarea id="travelinfo" name="Travel Information" placeholder="Airline, flight numbers, arrival and departure times, or train details"></textarea>
-            </div>
-            <div class="field">
-              <label for="food">Any food related allergies or dietary restrictions to take care of?</label>
-              <textarea id="food" name="Food Allergies or Dietary Restrictions" placeholder="Vegetarian, vegan, nut allergy, Jain meal request, or anything else"></textarea>
-            </div>
-            <div class="field">
-              <label for="needs">Any special needs to be taken care of such as travel information, mobility needs or anything else?</label>
-              <textarea id="needs" name="Special Needs" placeholder="Accessibility, mobility, elderly support, childcare, transport, or any other request"></textarea>
-            </div>
-            <div class="field">
-              <label for="hotelpref">Let us know your hotel check-in and check-out preferences, how many rooms you need for room block.</label>
-              <textarea id="hotelpref" name="Hotel Preferences" placeholder="Preferred check-in, check-out, number of rooms, bed preferences, and any other lodging note"></textarea>
-            </div>
-            <div class="field-help">If the button below does not work well on your device, send the same information directly to <a href="mailto:surbhimalav29+guestinfo@gmail.com">surbhimalav29+guestinfo@gmail.com</a>.</div>
-            <div class="hero-actions">
-              <button class="btn btn-primary" type="submit">Open email draft</button>
-              <a class="btn btn-secondary" href="mailto:surbhimalav29+guestinfo@gmail.com">Email directly</a>
-            </div>
-          </form>
+          <h3>Email the couple</h3>
+          <p>If you have additional travel questions, accessibility needs, or anything else that is not part of your RSVP form, please send us a note.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:surbhimalav29+guestinfo@gmail.com?subject=Wedding%20Question%20for%20Malav%20and%20Surbhi" target="_blank" rel="noopener noreferrer">Send email</a>
+            <a class="btn btn-secondary" href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink" target="_blank" rel="noopener noreferrer">Book hotel</a>
+          </div>
+          <p class="small-note">Email: <a href="mailto:surbhimalav29+guestinfo@gmail.com">surbhimalav29+guestinfo@gmail.com</a></p>
         </div>
       </div>
     </section>
