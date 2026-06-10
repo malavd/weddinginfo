@@ -1,320 +1,1084 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malav & Surbhi | Wedding Information</title>
-  <meta name="description" content="Wedding details for Malav Dalal and Surbhi Modi on September 20, 2026 at Lincolnshire Marriott Resort." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Surbhi & Malav | September 20, 2026</title>
+  <meta name="description" content="Wedding details for Surbhi Modi and Malav Dalal on September 20, 2026 at Lincolnshire Marriott Resort, Lincolnshire, Illinois." />
+  <meta property="og:title" content="Surbhi & Malav" />
+  <meta property="og:description" content="Wedding weekend details, hotel, and travel for guests." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    :root, [data-theme="light"] {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.7rem);
-      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
-      --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
-      --color-bg: #fbf6ef; --color-surface: #fffaf4; --color-surface-2: #fffdf9; --color-surface-offset: #f6ede2;
-      --color-border: #dfd1c1; --color-text: #2f241d; --color-text-muted: #6e5c4f; --color-text-faint: #a08d7f;
-      --color-primary: #8a1f2d; --color-primary-hover: #6d1824; --color-secondary: #a46e1b; --color-highlight: #f4e3c3; --color-text-inverse: #fff9f2;
-      --radius-sm: 0.375rem; --radius-md: 0.9rem; --radius-lg: 1.4rem; --radius-full: 9999px;
-      --shadow-sm: 0 1px 2px rgba(45, 20, 10, 0.06); --shadow-md: 0 16px 40px rgba(45, 20, 10, 0.1);
-      --content: 1160px; --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Manrope', Arial, sans-serif;
+    /* ─── TOKENS ─────────────────────────────────────── */
+    :root {
+      --gold-light: #f0d080;
+      --gold-mid:   #c9922a;
+      --gold-dark:  #8a5e15;
+      --crimson:    #8a1f2d;
+
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-serif:   'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Manrope', Arial, sans-serif;
+
+      --radius-sm:   0.4rem;
+      --radius-md:   0.9rem;
+      --radius-lg:   1.5rem;
+      --radius-full: 9999px;
+
+      --content: 1100px;
     }
+
     [data-theme="dark"] {
-      --color-bg: #1c1512; --color-surface: #261d18; --color-surface-2: #2b211c; --color-surface-offset: #322721;
-      --color-border: #4f4035; --color-text: #f4e8da; --color-text-muted: #d0bfaf; --color-text-faint: #a58f7d;
-      --color-primary: #e07c87; --color-primary-hover: #f0a0aa; --color-secondary: #ddb15c; --color-highlight: #45352a; --color-text-inverse: #1c1512;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.2); --shadow-md: 0 16px 40px rgba(0,0,0,0.3);
+      --bg:           #0e0b08;
+      --bg-2:         #15100c;
+      --surface:      #1e1610;
+      --surface-2:    #261c13;
+      --border:       rgba(192, 148, 60, 0.22);
+      --border-strong:rgba(192, 148, 60, 0.45);
+      --text:         #f5ead8;
+      --text-muted:   #c8b49a;
+      --text-faint:   #8a7661;
+      --gold:         #d4a843;
+      --gold-glow:    rgba(212, 168, 67, 0.15);
+      --gold-glow-lg: rgba(212, 168, 67, 0.08);
+      --hero-overlay: linear-gradient(180deg, rgba(14,11,8,0.35) 0%, rgba(14,11,8,0.72) 60%, #0e0b08 100%);
+      --shadow-card:  0 24px 60px rgba(0,0,0,0.5);
+      --shadow-sm:    0 2px 8px rgba(0,0,0,0.3);
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:var(--color-bg);color:var(--color-text)}
-    img,svg{display:block;max-width:100%} a{text-decoration:none;color:inherit} button{font:inherit;border:none;background:none;cursor:pointer}
-    .skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;background:var(--color-primary);color:var(--color-text-inverse);padding:0.75rem 1rem;border-radius:var(--radius-sm);z-index:1000}
-    .container{width:min(calc(100% - 2rem), var(--content));margin-inline:auto}
-    .site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb, var(--color-text) 10%, transparent)}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-4) 0}
-    .brand{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
-    .brand svg{width:2.3rem;height:2.3rem;color:var(--color-primary)}
-    .nav{display:flex;gap:var(--space-4);flex-wrap:wrap;align-items:center}
-    .nav a{font-size:var(--text-sm);color:var(--color-text-muted)} .nav a:hover,.nav a:focus-visible{color:var(--color-primary)}
-    .theme-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;border:1px solid color-mix(in srgb, var(--color-text) 12%, transparent);border-radius:var(--radius-full);background:var(--color-surface)}
-    .hero{padding:clamp(4rem, 10vw, 8rem) 0 3rem;background:radial-gradient(circle at top right, color-mix(in srgb, var(--color-secondary) 14%, transparent), transparent 35%), radial-gradient(circle at left center, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 36%)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:var(--space-8);align-items:end}
-    .eyebrow{font-size:var(--text-sm);letter-spacing:0.2em;text-transform:uppercase;color:var(--color-secondary);font-weight:800;margin-bottom:var(--space-4)}
-    h1,h2,h3{font-family:var(--font-display);line-height:1.02;font-weight:600}
-    h1{font-size:var(--text-2xl);max-width:12ch}
-    h2{font-size:var(--text-xl)}
-    .lede{margin-top:var(--space-5);max-width:60ch;color:var(--color-text-muted)}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-6)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:48px;padding:0.95rem 1.2rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;transition:0.2s ease}
-    .btn-primary{background:var(--color-primary);color:var(--color-text-inverse)} .btn-primary:hover{background:var(--color-primary-hover)}
-    .btn-secondary{border:1px solid color-mix(in srgb, var(--color-text) 12%, transparent);background:var(--color-surface)}
-    .hero-card,.card,.contact-panel{background:var(--color-surface);border:1px solid color-mix(in srgb, var(--color-text) 10%, transparent);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}
-    .hero-card,.card,.contact-panel{padding:var(--space-6)}
-    .meta{display:grid;gap:var(--space-4)} .meta-item{padding-bottom:var(--space-4);border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)} .meta-item:last-child{border-bottom:none;padding-bottom:0}
-    .meta-label{font-size:var(--text-xs);letter-spacing:0.16em;text-transform:uppercase;color:var(--color-text-faint);margin-bottom:0.35rem}
-    .meta-value{font-size:var(--text-lg);font-weight:700}
-    section{padding:clamp(2.5rem, 6vw, 5rem) 0}
-    .section-head{display:flex;justify-content:space-between;gap:var(--space-4);align-items:end;margin-bottom:var(--space-6)}
-    .section-head p{max-width:60ch;color:var(--color-text-muted)}
-    .grid-3,.grid-2{display:grid;gap:var(--space-5)} .grid-3{grid-template-columns:repeat(3, minmax(0,1fr))} .grid-2{grid-template-columns:repeat(2, minmax(0,1fr))}
-    .card h3,.contact-panel h3{font-size:var(--text-xl);margin-bottom:var(--space-3)} .card p,.card li,.contact-panel p{color:var(--color-text-muted)}
-    .list{list-style:none;display:grid;gap:0.8rem;margin-top:var(--space-4)}
-    .list li{padding-left:1rem;position:relative}.list li::before{content:"";position:absolute;left:0;top:0.7em;width:0.38rem;height:0.38rem;border-radius:50%;background:var(--color-secondary)}
-    .badge{display:inline-flex;padding:0.45rem 0.8rem;border-radius:var(--radius-full);background:var(--color-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:800;letter-spacing:0.08em;text-transform:uppercase}
-    .deadline{margin-top:var(--space-5);padding:var(--space-4) var(--space-5);background:color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));border:1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);border-radius:var(--radius-md)}
-    .deadline strong{color:var(--color-primary)}
-    .gift-note{margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)}
-    .gift-note strong{color:var(--color-primary)}
-    .map-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5);margin-top:var(--space-5)}
-    .map-card{display:flex;gap:var(--space-4);align-items:flex-start}
-    .map-icon{width:2.75rem;height:2.75rem;border-radius:0.85rem;background:var(--color-surface-offset);display:grid;place-items:center;flex:0 0 auto}
-    .map-icon svg{width:1.4rem;height:1.4rem}
-    .contact-panel{box-shadow:var(--shadow-md)}
-    .contact-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-5)}
-    .small-note{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4)}
-    .footer{padding:var(--space-8) 0;color:var(--color-text-muted);font-size:var(--text-sm)}
-    @media (max-width: 900px){.hero-grid,.grid-3,.grid-2,.map-links{grid-template-columns:1fr}.section-head,.header-inner{align-items:flex-start}.nav{display:none}h1{max-width:14ch}}
+
+    [data-theme="light"] {
+      --bg:           #faf4eb;
+      --bg-2:         #f4ede0;
+      --surface:      #fffdf7;
+      --surface-2:    #fef9f0;
+      --border:       rgba(138, 94, 21, 0.18);
+      --border-strong:rgba(138, 94, 21, 0.38);
+      --text:         #2a1e12;
+      --text-muted:   #5a4430;
+      --text-faint:   #9a7e62;
+      --gold:         #a07420;
+      --gold-glow:    rgba(160, 116, 32, 0.12);
+      --gold-glow-lg: rgba(160, 116, 32, 0.06);
+      --hero-overlay: linear-gradient(180deg, rgba(250,244,235,0.1) 0%, rgba(250,244,235,0.7) 65%, #faf4eb 100%);
+      --shadow-card:  0 24px 60px rgba(60, 35, 10, 0.12);
+      --shadow-sm:    0 2px 8px rgba(60, 35, 10, 0.08);
+    }
+
+    /* ─── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; border: none; background: none; color: inherit; cursor: pointer; }
+    .skip-link { position: absolute; left: -9999px; top: auto; }
+    .skip-link:focus { left: 1rem; top: 1rem; z-index: 1000; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--crimson); color: #fff; }
+
+    /* ─── LAYOUT ─────────────────────────────────────── */
+    .container { width: min(calc(100% - 1.5rem), var(--content)); margin-inline: auto; }
+
+    /* ─── HEADER ─────────────────────────────────────── */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      transition: background 0.35s, box-shadow 0.35s;
+    }
+    .site-header.scrolled {
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 68px;
+      padding: 0.75rem 0;
+    }
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: clamp(0.85rem, 0.8rem + 0.25vw, 1rem);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .desktop-nav { display: none; align-items: center; gap: 1.75rem; }
+    .desktop-nav a {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .desktop-nav a:hover { color: var(--gold); }
+    .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+    .icon-btn {
+      min-width: 42px; min-height: 42px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: color-mix(in srgb, var(--surface) 80%, transparent);
+    }
+    .icon-btn svg { width: 18px; height: 18px; }
+    .mobile-menu { position: relative; }
+    .mobile-menu summary { list-style: none; }
+    .mobile-menu summary::-webkit-details-marker { display: none; }
+    .mobile-panel {
+      position: absolute; right: 0; top: calc(100% + 0.5rem);
+      width: min(80vw, 240px);
+      padding: 1.25rem;
+      display: grid; gap: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-card);
+    }
+    .mobile-panel a {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .mobile-panel a:hover { color: var(--gold); }
+
+    /* ─── HERO ───────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 0 clamp(3rem, 7vw, 5.5rem);
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 90% 60% at 50% 0%, rgba(192,148,60,0.14) 0%, transparent 55%),
+        radial-gradient(ellipse 55% 40% at 80% 90%, rgba(138,31,45,0.18) 0%, transparent 55%),
+        var(--bg);
+    }
+    .hero-canvas {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-mandala {
+      width: clamp(360px, 70vw, 760px);
+      height: clamp(360px, 70vw, 760px);
+      opacity: 0.055;
+      color: var(--gold-light);
+    }
+    [data-theme="light"] .hero-mandala { opacity: 0.09; }
+
+    .hero-body {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+    .eyebrow {
+      font-family: var(--font-display);
+      font-size: clamp(0.7rem, 0.65rem + 0.25vw, 0.82rem);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+    .hero-name {
+      font-family: var(--font-serif);
+      font-size: clamp(4rem, 3rem + 4vw, 9rem);
+      font-weight: 300;
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      max-width: 14ch;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.6rem 0;
+      color: var(--gold);
+    }
+    .hero-divider::before, .hero-divider::after {
+      content: '';
+      width: clamp(40px, 8vw, 100px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, currentColor, transparent);
+    }
+    .hero-divider svg { width: 22px; height: 22px; flex: 0 0 auto; }
+    .hero-date {
+      font-family: var(--font-display);
+      font-size: clamp(0.82rem, 0.75rem + 0.35vw, 1rem);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .hero-venue {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 0.9rem + 0.5vw, 1.4rem);
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      min-height: 50px;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--gold-mid), var(--gold-light) 55%, var(--gold-mid));
+      color: #1a1000;
+      box-shadow: 0 0 0 1px rgba(192,148,60,0.3), 0 4px 20px rgba(192,148,60,0.25);
+      transition: 0.25s ease;
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(192,148,60,0.5), 0 8px 30px rgba(192,148,60,0.35); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      min-height: 50px;
+      padding: 0.95rem 1.4rem;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid var(--border-strong);
+      color: var(--text-muted);
+      transition: 0.25s ease;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .hero-scroll-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-faint);
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+      animation: scrollDown 2s ease-in-out infinite;
+    }
+    @keyframes scrollDown {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      40%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      60%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ─── COUNTDOWN ──────────────────────────────────── */
+    .countdown-section {
+      background:
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(3rem, 7vw, 5.5rem) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .countdown-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, var(--gold-glow-lg), transparent 65%);
+      pointer-events: none;
+    }
+    .countdown-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .countdown-kicker {
+      font-family: var(--font-display);
+      font-size: 0.76rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .countdown-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.8rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text);
+    }
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(0.75rem, 2vw, 1.5rem);
+      width: min(100%, 700px);
+      margin-top: 0.5rem;
+    }
+    .count-unit {
+      position: relative;
+      padding: clamp(1.4rem, 3vw, 2.2rem) clamp(0.75rem, 2vw, 1.4rem);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .count-unit::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 70% at 50% 0%, var(--gold-glow), transparent 65%);
+      pointer-events: none;
+    }
+    .count-unit:hover { border-color: var(--border-strong); }
+    .count-value {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 2rem + 2vw, 5rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--gold);
+      position: relative;
+      z-index: 1;
+    }
+    .count-label {
+      display: block;
+      margin-top: 0.6rem;
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+    }
+    .countdown-deadline {
+      font-family: var(--font-serif);
+      font-size: clamp(0.95rem, 0.85rem + 0.3vw, 1.15rem);
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .countdown-deadline strong { color: var(--gold); font-style: normal; }
+
+    /* ─── SECTION SHARED ─────────────────────────────── */
+    section.content { padding: clamp(3rem, 7vw, 5.5rem) 0; scroll-margin-top: 80px; }
+    .section-head { text-align: center; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+    .section-kicker {
+      font-family: var(--font-display);
+      font-size: 0.74rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 1.5rem + 1vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.05;
+    }
+    .section-sub {
+      margin-top: 0.85rem;
+      font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1rem);
+      color: var(--text-muted);
+      max-width: 56ch;
+      margin-inline: auto;
+    }
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      color: var(--gold);
+      opacity: 0.6;
+      margin: 0.85rem 0 0;
+    }
+    .ornament-divider::before, .ornament-divider::after {
+      content: '';
+      width: 36px; height: 1px;
+      background: currentColor;
+    }
+    .ornament-divider svg { width: 14px; height: 14px; }
+
+    /* ─── DETAILS STRIP ──────────────────────────────── */
+    .details-strip {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .detail-cell {
+      padding: 1.4rem 1.6rem;
+      background: var(--surface);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .detail-icon {
+      width: 2.4rem; height: 2.4rem;
+      border-radius: var(--radius-md);
+      display: grid; place-items: center;
+      background: color-mix(in srgb, var(--gold-glow) 60%, transparent);
+      border: 1px solid var(--border);
+      flex: 0 0 auto;
+    }
+    .detail-icon svg { width: 1.1rem; height: 1.1rem; color: var(--gold); }
+    .detail-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+    .detail-text span {
+      color: var(--text-muted);
+      font-size: clamp(0.87rem, 0.82rem + 0.2vw, 0.98rem);
+    }
+
+    /* ─── CARDS ──────────────────────────────────────── */
+    .cards-2, .cards-3 { display: grid; gap: 1.25rem; }
+    .glass-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.4rem, 3vw, 2rem);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .glass-card:hover { border-color: var(--border-strong); }
+    .glass-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 45% at 80% 0%, var(--gold-glow-lg), transparent 55%);
+      pointer-events: none;
+    }
+    .card-kicker {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.65rem;
+    }
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 1.3rem + 0.5vw, 2rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 0.85rem;
+      line-height: 1.05;
+    }
+    .card-list {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .card-list li {
+      padding-left: 1.1rem;
+      position: relative;
+      color: var(--text-muted);
+      font-size: clamp(0.87rem, 0.82rem + 0.2vw, 0.98rem);
+    }
+    .card-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.65em;
+      width: 0.32rem; height: 0.32rem;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.8;
+    }
+    .card-note {
+      margin-top: 1.1rem;
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius-md);
+      background: color-mix(in srgb, var(--gold-glow) 35%, var(--surface-2));
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: clamp(0.87rem, 0.82rem + 0.2vw, 0.98rem);
+    }
+    .card-note strong { color: var(--gold); }
+    .card-actions { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+    /* ─── CONTACT ────────────────────────────────────── */
+    .contact-wrap {
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 0%, var(--gold-glow), transparent 55%),
+        var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);
+      text-align: center;
+    }
+    .contact-wrap .section-title { margin-bottom: 0.5rem; }
+    .contact-wrap p { color: var(--text-muted); max-width: 52ch; margin-inline: auto; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; margin-top: 1.75rem; }
+    .small-note { margin-top: 1.25rem; font-size: 0.9rem; color: var(--text-faint); }
+    .small-note a { color: var(--gold); text-decoration: underline; text-underline-offset: 0.15em; }
+
+    /* ─── FOOTER ─────────────────────────────────────── */
+    .site-footer {
+      padding: 2.5rem 0 3.5rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .footer-monogram {
+      width: 3rem; height: 3rem;
+      color: var(--gold);
+      margin: 0 auto 1rem;
+      opacity: 0.6;
+    }
+    .footer-text {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-faint);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────── */
+    @media (min-width: 680px) {
+      .details-strip { grid-template-columns: repeat(2, 1fr); }
+      .cards-2 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .details-strip { grid-template-columns: repeat(4, 1fr); }
+      .cards-3 { grid-template-columns: repeat(3, 1fr); }
+      .desktop-nav { display: flex; }
+      .mobile-menu { display: none; }
+    }
+    @media (max-width: 520px) {
+      .countdown-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn-gold, .btn-outline { width: min(100%, 280px); justify-content: center; }
+    }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
-  <header class="site-header">
+
+  <!-- ─── HEADER ─────────────────────────────────────── -->
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <svg viewBox="0 0 64 64" aria-label="Malav and Surbhi wedding monogram" role="img">
-          <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
-          <path d="M18 40V22l14 17 14-17v18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M25 45c2.5-3 5-4.5 7-4.5s4.5 1.5 7 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-        </svg>
-        <span>Malav &amp; Surbhi</span>
-      </div>
-      <nav class="nav" aria-label="Primary">
-        <a href="#venue">Venue</a>
+      <a href="#top" aria-label="Surbhi and Malav, back to top">
+        <span class="brand-title">Surbhi &amp; Malav</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#details">Details</a>
+        <a href="#weekend">Weekend</a>
         <a href="#stay">Stay</a>
         <a href="#travel">Travel</a>
-        <a href="#celebration">Celebration</a>
-        <a href="#contact">Questions</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
+
+      <div class="header-actions">
+        <details class="mobile-menu">
+          <summary class="icon-btn mobile-menu-summary" aria-label="Open navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </summary>
+          <div class="mobile-panel">
+            <a href="#details">Details</a>
+            <a href="#weekend">Weekend</a>
+            <a href="#stay">Stay</a>
+            <a href="#travel">Travel</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </details>
+
+        <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="content">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Gujarati Hindu Wedding</div>
-          <h1>Malav Dalal &amp; Surbhi Modi</h1>
-          <p class="lede">We are so grateful to celebrate our marriage with family and friends on <strong>September 20, 2026</strong> at Lincolnshire Marriott Resort. This page brings together the hotel and travel details for the weekend, while your separate RSVP link in email will guide the event-specific questions and attendance details.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink" target="_blank" rel="noopener noreferrer">Book the room block</a>
-            <a class="btn btn-secondary" href="#travel">View directions</a>
-          </div>
-          <div class="deadline"><strong>Please reserve your room and submit your RSVP by July 15, 2026.</strong> Ceremony timing and guest-specific event details will continue to be shared individually by email.</div>
-        </div>
-        <aside class="hero-card" aria-label="Wedding summary">
-          <span class="badge">Save the date</span>
-          <div class="meta">
-            <div class="meta-item">
-              <div class="meta-label">Date</div>
-              <div class="meta-value">September 20, 2026</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Venue</div>
-              <div class="meta-value">Lincolnshire Marriott Resort</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">Address</div>
-              <div class="meta-value">10 Marriott Drive, Lincolnshire, IL 60069</div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-label">RSVP</div>
-              <div class="meta-value">Please use the RSVP link sent to you by email, or contact Malav, Surbhi, or family with questions.</div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
 
-    <section id="celebration">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="badge">Celebration</span>
-            <h2>A joyful Gujarati Hindu wedding weekend</h2>
-          </div>
-          <p>Gujarati Hindu weddings often bring together multiple ceremonies, family traditions, and shared moments across the celebration, Event details and RSVP-Invitations you receive in email.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card">
-            <h3>Planning notes</h3>
-            <ul class="list">
-              <li>Your invitation email will confirm the event timing and schedule.</li>
-              <li>Booking early is the easiest way to enjoy the weekend comfortably and stay close to family activities.</li>
-              <li>If you have questions about attendance or logistics, please reach out to Malav, Surbhi, or family.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Gift note</h3>
-            <p>Above all, your presence and blessings mean the most to us. For guests who are planning ahead, we kindly request no boxed gifts.</p>
-            <div class="gift-note"><strong>With love and gratitude:</strong> your presence is the greatest gift, and we kindly request no boxed gifts.</div>
-          </article>
-        </div>
+    <!-- ─── HERO ─────────────────────────────────────── -->
+    <section class="hero" id="top" aria-label="Wedding introduction">
+      <div class="hero-canvas" aria-hidden="true">
+        <!-- Mandala SVG ornament - lotus / geometric Indian motif -->
+        <svg class="hero-mandala" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="200" cy="200" r="196" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="200" cy="200" r="176" stroke="currentColor" stroke-width="0.4"/>
+          <circle cx="200" cy="200" r="140" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="200" cy="200" r="100" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="200" cy="200" r="62" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="200" cy="200" r="28" stroke="currentColor" stroke-width="0.8"/>
+          <!-- 16-petal lotus -->
+          <g stroke="currentColor" stroke-width="0.7">
+            <ellipse cx="200" cy="155" rx="10" ry="40" />
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(22.5 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(45 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(67.5 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(90 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(112.5 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(135 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(157.5 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(180 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(202.5 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(225 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(247.5 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(270 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(292.5 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(315 200 200)"/>
+            <ellipse cx="200" cy="155" rx="10" ry="40" transform="rotate(337.5 200 200)"/>
+          </g>
+          <!-- 8 outer diamonds -->
+          <g stroke="currentColor" stroke-width="0.6" fill="none">
+            <polygon points="200,10 207,25 200,40 193,25" />
+            <polygon points="200,10 207,25 200,40 193,25" transform="rotate(45 200 200)"/>
+            <polygon points="200,10 207,25 200,40 193,25" transform="rotate(90 200 200)"/>
+            <polygon points="200,10 207,25 200,40 193,25" transform="rotate(135 200 200)"/>
+            <polygon points="200,10 207,25 200,40 193,25" transform="rotate(180 200 200)"/>
+            <polygon points="200,10 207,25 200,40 193,25" transform="rotate(225 200 200)"/>
+            <polygon points="200,10 207,25 200,40 193,25" transform="rotate(270 200 200)"/>
+            <polygon points="200,10 207,25 200,40 193,25" transform="rotate(315 200 200)"/>
+          </g>
+          <!-- radial lines -->
+          <g stroke="currentColor" stroke-width="0.4">
+            <line x1="200" y1="4" x2="200" y2="396"/>
+            <line x1="4" y1="200" x2="396" y2="200"/>
+            <line x1="200" y1="4" x2="200" y2="396" transform="rotate(45 200 200)"/>
+            <line x1="200" y1="4" x2="200" y2="396" transform="rotate(22.5 200 200)"/>
+            <line x1="200" y1="4" x2="200" y2="396" transform="rotate(67.5 200 200)"/>
+            <line x1="200" y1="4" x2="200" y2="396" transform="rotate(112.5 200 200)"/>
+            <line x1="200" y1="4" x2="200" y2="396" transform="rotate(157.5 200 200)"/>
+          </g>
+        </svg>
       </div>
-    </section>
 
-    <section id="venue">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="badge">Venue</span>
-            <h2>Lincolnshire Marriott Resort</h2>
-          </div>
-          <p>The resort is set on 175 acres in Chicago’s North Shore suburbs and offers event space, restaurants, golf, spa amenities, pools, and Marriott Theatre on property.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card">
-            <h3>Where to go</h3>
-            <ul class="list">
-              <li>Lincolnshire Marriott Resort, 10 Marriott Drive, Lincolnshire, Illinois 60069.</li>
-              <li>Complimentary on-site parking is available for resort guests.</li>
-              <li>Hotel check-in begins at 4:00 pm and check-out is at 11:00 am.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>What’s on site</h3>
-            <ul class="list">
-              <li>Restaurants and bars, an on-site Starbucks, spa access, pools, and a fitness center.</li>
-              <li>Crane’s Landing Golf Club is on property for guests staying through the weekend.</li>
-              <li>Marriott Theatre offers another easy on-site outing during your stay.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+      <div class="hero-body container">
+        <p class="eyebrow">A Gujarati Hindu Wedding</p>
 
-    <section id="stay">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="badge">Stay</span>
-            <h2>Hotel booking</h2>
-          </div>
-          <p>Staying at the venue is the simplest option for the wedding weekend. Please use the room block link and complete your booking by July 15, 2026.</p>
-        </div>
-        <div class="card">
-          <h3>Reserve through the room block</h3>
-          <p>Booking at the resort keeps everything easy for ceremonies, family gatherings, and late-evening celebrations.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink" target="_blank" rel="noopener noreferrer">Reserve with Marriott</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <h1 class="hero-name">
+          <em>Surbhi</em> &amp; <em>Malav</em>
+        </h1>
 
-    <section id="travel">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="badge">Travel</span>
-            <h2>Directions and arrival</h2>
-          </div>
-          <p>For most out-of-town guests, Chicago O’Hare is the closest airport. The resort does not provide a standard airport shuttle, so rideshare, taxi, rental car, or a pre-arranged pickup will be the easiest options.</p>
+        <div class="hero-divider" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 3c1.5 2.2 3.5 4 6 5.2-2.3 1.3-4.3 3.1-6 5.5-1.7-2.4-3.7-4.2-6-5.5C8.5 7 10.5 5.2 12 3Z"/>
+            <path d="M12 14.5c1.2 1.8 2.8 3.3 4.8 4.4-1.9 1-3.5 2.3-4.8 4.1-1.3-1.8-2.9-3.1-4.8-4.1 2-1.1 3.6-2.6 4.8-4.4Z"/>
+          </svg>
         </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>By air</h3>
-            <ul class="list">
-              <li>Nearest airport: Chicago O’Hare International Airport (ORD).</li>
-              <li>The resort is about 18 miles from O’Hare.</li>
-              <li>Typical driving time is about 28 to 29 minutes depending on traffic.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>By train</h3>
-            <ul class="list">
-              <li>Chicago Union Station is your noted main train arrival point.</li>
-              <li>The resort also lists nearby Metra access such as Prairie View and Glenview.</li>
-              <li>Guests arriving by rail should plan the final segment by rideshare or taxi.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Local transport</h3>
-            <ul class="list">
-              <li>The hotel does not provide regular airport shuttle service.</li>
-              <li>Rideshare is usually the simplest option from ORD.</li>
-              <li>If you are staying through multiple events, having a car may be helpful for suburban travel.</li>
-            </ul>
-          </article>
-        </div>
-        <div class="map-links">
-          <a class="card map-card" href="https://www.google.com/maps/search/10+Marriott+Drive,+Lincolnshire,+IL+60069" target="_blank" rel="noopener noreferrer">
-            <div class="map-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6-5.33-6-11a6 6 0 1 1 12 0c0 5.67-6 11-6 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-            </div>
-            <div>
-              <h3>Open in Google Maps</h3>
-              <p>Use Google Maps for turn-by-turn directions to the resort.</p>
-            </div>
+
+        <p class="hero-date">Sunday · September 20, 2026 · 9:00 AM Central Time</p>
+        <p class="hero-venue">Lincolnshire Marriott Resort · Lincolnshire, Illinois</p>
+
+        <div class="hero-ctas" role="group" aria-label="Primary actions">
+          <a class="btn-gold"
+             href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink"
+             target="_blank" rel="noopener noreferrer">
+            Reserve a Room
           </a>
-          <a class="card map-card" href="https://maps.apple.com/place?place-id=I57194BA544EB9D28" target="_blank" rel="noopener noreferrer">
-            <div class="map-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-6-5.33-6-11a6 6 0 1 1 12 0c0 5.67-6 11-6 11Z"></path><path d="M9.5 10.5h5"></path></svg>
-            </div>
-            <div>
-              <h3>Open in Apple Maps</h3>
-              <p>Open the venue in Apple Maps for iPhone-friendly directions.</p>
-            </div>
+          <a class="btn-outline"
+             href="https://www.google.com/maps/search/10+Marriott+Drive,+Lincolnshire,+IL+60069"
+             target="_blank" rel="noopener noreferrer">
+            Google Maps
+          </a>
+          <a class="btn-outline"
+             href="https://maps.apple.com/place?place-id=I57194BA544EB9D28"
+             target="_blank" rel="noopener noreferrer">
+            Apple Maps
           </a>
         </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span class="scroll-line"></span>
+          <span>Scroll</span>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- ─── COUNTDOWN ──────────────────────────────────── -->
+    <div class="countdown-section" aria-label="Wedding countdown" role="region">
+      <div class="container countdown-inner">
+        <p class="countdown-kicker">Time until the ceremony</p>
+        <p class="countdown-heading">The celebration begins in</p>
+
+        <div class="countdown-grid" aria-live="polite" aria-atomic="true">
+          <div class="count-unit">
+            <span class="count-value" id="cd-days">--</span>
+            <span class="count-label">Days</span>
+          </div>
+          <div class="count-unit">
+            <span class="count-value" id="cd-hours">--</span>
+            <span class="count-label">Hours</span>
+          </div>
+          <div class="count-unit">
+            <span class="count-value" id="cd-minutes">--</span>
+            <span class="count-label">Minutes</span>
+          </div>
+          <div class="count-unit">
+            <span class="count-value" id="cd-seconds">--</span>
+            <span class="count-label">Seconds</span>
+          </div>
+        </div>
+
+        <p class="countdown-deadline">
+          Please <strong>reserve your room and submit your RSVP by July 15, 2026</strong>
+          to ensure your presence for the weekend.
+        </p>
+
+        <a class="btn-gold"
+           href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink"
+           target="_blank" rel="noopener noreferrer"
+           style="margin-top:0.75rem">
+          Book the Hotel Room Block
+        </a>
+      </div>
+    </div>
+
+    <!-- ─── DETAILS STRIP ──────────────────────────────── -->
+    <section class="content" id="details" aria-labelledby="details-heading">
       <div class="container">
         <div class="section-head">
-          <div>
-            <span class="badge">Questions</span>
-            <h2>Need anything else?</h2>
+          <p class="section-kicker">At a glance</p>
+          <h2 class="section-title" id="details-heading">Everything you need to know</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+            </svg>
           </div>
-          <p>Please use the separate RSVP link in your email for attendance details and guest questions. For anything else, you are welcome to email the couple directly.</p>
         </div>
-        <div class="contact-panel">
-          <h3>Email the couple</h3>
-          <p>If you have additional travel questions, accessibility needs, or anything else that is not part of your RSVP form, please send us a note.</p>
+
+        <div class="details-strip" role="list">
+          <div class="detail-cell" role="listitem">
+            <div class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="17" rx="2"/>
+              </svg>
+            </div>
+            <div class="detail-text">
+              <strong>Date &amp; Time</strong>
+              <span>Sunday, September 20, 2026 · 9:00 AM CT</span>
+            </div>
+          </div>
+
+          <div class="detail-cell" role="listitem">
+            <div class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 21s-6-5.33-6-11a6 6 0 1 1 12 0c0 5.67-6 11-6 11Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+            </div>
+            <div class="detail-text">
+              <strong>Venue</strong>
+              <span>10 Marriott Drive, Lincolnshire, IL 60069</span>
+            </div>
+          </div>
+
+          <div class="detail-cell" role="listitem">
+            <div class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="11" width="18" height="10" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <div class="detail-text">
+              <strong>Hotel Block</strong>
+              <span>Book through the room block link by July 15, 2026</span>
+            </div>
+          </div>
+
+          <div class="detail-cell" role="listitem">
+            <div class="detail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/>
+              </svg>
+            </div>
+            <div class="detail-text">
+              <strong>Attire</strong>
+              <span>Traditional Indian attire or formal wear warmly welcomed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── WEEKEND ────────────────────────────────────── -->
+    <section class="content" id="weekend" aria-labelledby="weekend-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">The celebration</p>
+          <h2 class="section-title" id="weekend-heading">A joyful wedding weekend</h2>
+          <p class="section-sub">Gujarati Hindu weddings bring together family, tradition, and shared moments across the celebration. Your invitation email will confirm schedule.</p>
+          <div class="ornament-divider" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cards-3">
+          <article class="glass-card">
+            <p class="card-kicker">Planning</p>
+            <h3 class="card-title">Before you arrive</h3>
+            <ul class="card-list">
+              <li>Your RSVP link in email covers attendance and event-specific questions.</li>
+              <li>Ceremony begins at 9:00 AM — plan to arrive the evening of September 19 or early that morning.</li>
+              <li>Booking early is the simplest way to stay close to family activities and the celebration spaces.</li>
+            </ul>
+          </article>
+
+          <article class="glass-card" id="stay">
+            <p class="card-kicker">Hotel</p>
+            <h3 class="card-title">Stay at the resort</h3>
+            <ul class="card-list">
+              <li>Hotel check-in begins at 4:00 PM; check-out is at 11:00 AM.</li>
+              <li>Restaurants, on-site Starbucks, spa, pool, and fitness center are all on property.</li>
+              <li>Complimentary self-parking is available for resort guests.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn-gold"
+                 href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink"
+                 target="_blank" rel="noopener noreferrer">
+                Book the Room Block
+              </a>
+            </div>
+          </article>
+
+          <article class="glass-card">
+            <p class="card-kicker">Attire &amp; Gifts</p>
+            <h3 class="card-title">Dress &amp; celebration</h3>
+            <ul class="card-list">
+              <li>Traditional Indian attire is warmly welcomed and encouraged.</li>
+              <li>A suit, formal dress, or elegant festive outfit is equally lovely if you prefer.</li>
+              <li>Comfortable footwear is a good idea for a full-day celebration and resort walking areas.</li>
+            </ul>
+            <div class="card-note">
+              <strong>Gift note —</strong> your presence and blessings mean the most to us. We kindly request no boxed gifts.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TRAVEL ─────────────────────────────────────── -->
+    <section class="content" id="travel" aria-labelledby="travel-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Arrival</p>
+          <h2 class="section-title" id="travel-heading">Directions &amp; getting here</h2>
+          <p class="section-sub">Chicago O'Hare International Airport is the closest major airport, approximately 18 miles from the resort. Rideshare, taxi, or rental car is the easiest final-leg option.</p>
+          <div class="ornament-divider" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cards-2">
+          <article class="glass-card">
+            <p class="card-kicker">By air</p>
+            <h3 class="card-title">Flying in</h3>
+            <ul class="card-list">
+              <li>Nearest airport: Chicago O'Hare International (ORD) — about 18 miles from the resort.</li>
+              <li>Typical drive from ORD is approximately 28–30 minutes without heavy traffic.</li>
+              <li>The hotel does not provide a regular airport shuttle from ORD; rideshare or taxi is the simplest option.</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn-outline"
+                 href="https://www.google.com/maps/search/10+Marriott+Drive,+Lincolnshire,+IL+60069"
+                 target="_blank" rel="noopener noreferrer">
+                Google Maps
+              </a>
+              <a class="btn-outline"
+                 href="https://maps.apple.com/place?place-id=I57194BA544EB9D28"
+                 target="_blank" rel="noopener noreferrer">
+                Apple Maps
+              </a>
+            </div>
+          </article>
+
+          <article class="glass-card">
+            <p class="card-kicker">By road or rail</p>
+            <h3 class="card-title">Driving &amp; transit</h3>
+            <ul class="card-list">
+              <li>Complimentary self-parking is available on site for all hotel guests.</li>
+              <li>Arriving by Metra or Amtrak? Plan the final leg from your train station by rideshare or taxi.</li>
+              <li>If you're staying through multiple events, having a car may be helpful for suburban flexibility.</li>
+            </ul>
+            <div class="card-note">
+              <strong>Address —</strong> 10 Marriott Drive, Lincolnshire, Illinois 60069.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ────────────────────────────────────── -->
+    <section class="content" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-wrap">
+          <p class="section-kicker">Questions</p>
+          <h2 class="section-title" id="contact-heading">Need anything else?</h2>
+          <div class="ornament-divider" style="justify-content:center;margin-bottom:1rem" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+            </svg>
+          </div>
+          <p>Use the RSVP link in your email for attendance and event-specific questions. For travel, accessibility, or anything else outside the RSVP form, we are happy to help directly.</p>
+
           <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:surbhimalav29+guestinfo@gmail.com?subject=Wedding%20Question%20for%20Malav%20and%20Surbhi" target="_blank" rel="noopener noreferrer">Send email</a>
-            <a class="btn btn-secondary" href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink" target="_blank" rel="noopener noreferrer">Book hotel</a>
+            <a class="btn-gold"
+               href="mailto:surbhimalav29+guestinfo@gmail.com?subject=Wedding%20Question%20for%20Malav%20and%20Surbhi">
+              Email the Couple
+            </a>
+            <a class="btn-outline"
+               href="https://app.marriott.com/resview2?id=1781029202067&key=GRP&app=resvlink"
+               target="_blank" rel="noopener noreferrer">
+              Book Hotel
+            </a>
           </div>
-          <p class="small-note">Email: <a href="mailto:surbhimalav29+guestinfo@gmail.com">surbhimalav29+guestinfo@gmail.com</a></p>
+
+          <p class="small-note">
+            <a href="mailto:surbhimalav29+guestinfo@gmail.com">surbhimalav29+guestinfo@gmail.com</a>
+          </p>
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="container">With love, Malav Dalal &amp; Surbhi Modi.</div>
+  <!-- ─── FOOTER ───────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <svg class="footer-monogram" viewBox="0 0 64 64" aria-label="Malav and Surbhi monogram" role="img">
+        <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M18 40V22l14 17 14-17v18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M25 45c2.5-3 5-4.5 7-4.5s4.5 1.5 7 4.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <p class="footer-text">With love, Surbhi Modi &amp; Malav Dalal</p>
+    </div>
   </footer>
 
   <script>
-    (function(){
-      const t=document.querySelector('[data-theme-toggle]');
-      const r=document.documentElement;
-      let d=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
-      r.setAttribute('data-theme',d);
-      const render=()=>{t.innerHTML=d==='dark'?'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'; t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');};
-      render();
-      t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);render();});
-    })();
+  (function () {
+    /* ── Theme toggle ── */
+    const root   = document.documentElement;
+    const toggle = document.querySelector('[data-theme-toggle]');
+    const stored = localStorage.getItem('wedding-theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Default to dark (editorial default) unless user or system says otherwise
+    let theme = stored || (sysDark.matches ? 'dark' : 'light');
+
+    function applyTheme(t) {
+      root.setAttribute('data-theme', t);
+      toggle.innerHTML = t === 'dark'
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      toggle.setAttribute('aria-label', 'Switch to ' + (t === 'dark' ? 'light' : 'dark') + ' mode');
+    }
+
+    applyTheme(theme);
+
+    toggle.addEventListener('click', () => {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('wedding-theme', theme);
+      applyTheme(theme);
+    });
+
+    /* ── Header scroll shadow ── */
+    const header = document.getElementById('site-header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ── Close mobile menu on link click ── */
+    document.querySelectorAll('.mobile-panel a').forEach(link => {
+      link.addEventListener('click', () => {
+        const d = link.closest('details');
+        if (d) d.removeAttribute('open');
+      });
+    });
+
+    /* ── Countdown — Sept 20 2026 09:00 AM US/Central (CDT = UTC-5) ── */
+    const TARGET = new Date('2026-09-20T09:00:00-05:00').getTime();
+    const els = {
+      d: document.getElementById('cd-days'),
+      h: document.getElementById('cd-hours'),
+      m: document.getElementById('cd-minutes'),
+      s: document.getElementById('cd-seconds'),
+    };
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function tick() {
+      const diff = TARGET - Date.now();
+      if (diff <= 0) {
+        els.d.textContent = els.h.textContent = els.m.textContent = els.s.textContent = '00';
+        return;
+      }
+      els.d.textContent = Math.floor(diff / 86400000);
+      els.h.textContent = pad(Math.floor((diff / 3600000) % 24));
+      els.m.textContent = pad(Math.floor((diff / 60000) % 60));
+      els.s.textContent = pad(Math.floor((diff / 1000) % 60));
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  })();
   </script>
 </body>
 </html>
